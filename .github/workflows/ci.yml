@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node for markdownlint
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install markdownlint-cli
+        run: |
+          npm --version
+          npx --yes markdownlint-cli@0.41.0 --version | cat
+
+      - name: Lint Markdown
+        run: |
+          npx --yes markdownlint-cli@0.41.0 "**/*.md" --ignore node_modules | cat
+
+      - name: Validate JSON
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y jq
+          jq . MeetingMinutes_GPT.json | cat
+
+      - name: Python syntax check
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          python -m py_compile scripts/minutes.gen.py | cat
+
+

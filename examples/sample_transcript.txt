@@ -1,0 +1,10 @@
+Moderator: Thanks, everyone. Goal today: decide on the vendor RFP timeline and review the onboarding plan.
+Dana: For the RFP, I can draft the first version. Target October 1 sounds reasonable.
+Ravi: Agreed on Oct 1. I will collect security requirements from IT by next Tuesday.
+Leah: We still don't have confirmation from Legal on data retention. That's a risk.
+Dana: Action: I'll draft the RFP by Oct 1, and I'll include SLA and pricing tiers.
+Ravi: Action: I'll sync with IT on security requirements. Deadline next Tuesday. Owner: Ravi.
+Moderator: Decision: We proceed with an open RFP; selection in mid-October. Legal review remains pending.
+Leah: For onboarding, TBD owner for the training checklist—depends on headcount next week.
+
+
